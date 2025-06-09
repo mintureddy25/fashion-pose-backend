@@ -49,10 +49,10 @@ const processImage = async (imageId, imageUrl) => {
       status: "failed",
       error: err.message,
     });
-    // Handle batch progress
-    if (updatedImage.batchId) {
-      await Batch.findByIdAndUpdate(updatedImage.batchId, { status: "failed" });
-    }
+    // // Handle batch progress
+    // if (updatedImage.batchId) {
+    //   await Batch.findByIdAndUpdate(updatedImage.batchId, { status: "failed" });
+    // }
   }
 };
 
